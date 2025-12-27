@@ -112,6 +112,8 @@ ASP.NET Core Web API
 ---
 
 ## 📁 專案目錄結構
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/310ab772-b604-4ebf-b04e-daec728cd0e2" />
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/45f98231-f70c-40fe-9484-94d3dd411039" />
 
 生成中文的圖片有些字變得很奇怪
