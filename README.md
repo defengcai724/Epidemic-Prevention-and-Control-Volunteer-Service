@@ -108,6 +108,7 @@ ASP.NET Core Web API
 ---
 
 ## 📁 專案目錄結構
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/45f98231-f70c-40fe-9484-94d3dd411039" />
 
 EpidemicVolunteerSystem/
 ├─ src/
