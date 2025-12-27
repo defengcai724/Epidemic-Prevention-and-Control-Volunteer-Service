@@ -1,5 +1,4 @@
 # 📱 基於 Android 的疫情防控志願服務系統  
-Android-based Epidemic Prevention Volunteer Service System
 
 本專案為一套 **基於 Android 的疫情防控志願服務管理系統**，結合 **Android App、ASP.NET Core Web API 與 MySQL** 建置，提供志願者管理、任務派遣、出勤簽到、防疫物資管理與疫情公告等功能。
 
