@@ -23,9 +23,7 @@ Android-based Epidemic Prevention Volunteer Service System
 <img width="7053" height="3435" alt="deepseek_mermaid_20251227_ca7777" src="https://github.com/user-attachments/assets/fbfa64dc-beea-40cd-84f3-58bbb628ac70" />
 
 
-生成中文的圖片有些字變得很奇怪
-
-[ Android App ]
+[ Android App ] 
 |
 | HTTP / JSON (REST API)
 v
@@ -113,11 +111,9 @@ ASP.NET Core Web API
 ---
 
 ## 📁 專案目錄結構
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/310ab772-b604-4ebf-b04e-daec728cd0e2" />
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/45f98231-f70c-40fe-9484-94d3dd411039" />
+<img width="6609" height="1844" alt="deepseek_mermaid_20251227_134fa2" src="https://github.com/user-attachments/assets/419c2914-5133-40c6-b216-90c3f6a99eef" />
 
-生成中文的圖片有些字變得很奇怪
 
 EpidemicVolunteerSystem/
 ├─ src/
