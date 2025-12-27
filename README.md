@@ -22,6 +22,8 @@ Android-based Epidemic Prevention Volunteer Service System
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1698f4b9-7263-4dab-98d3-1513e2c65c38" />
 
+生成中文的圖片有些字變得很奇怪
+
 [ Android App ]
 |
 | HTTP / JSON (REST API)
