@@ -18,6 +18,8 @@ Android-based Epidemic Prevention Volunteer Service System
 ---
 
 ## 🏗️ 系統架構概觀
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbef6346-18a5-44f6-96e3-d524c07e0d80" />
+
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1698f4b9-7263-4dab-98d3-1513e2c65c38" />
 
 [ Android App ]
