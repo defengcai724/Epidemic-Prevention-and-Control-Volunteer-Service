@@ -1,10 +1,11 @@
+# 基於 Android 的疫情防控志願服務管理系統
 🧾 一、需求說明書（Software Requirements Specification, SRS）
 
-1.1 專案簡介
+# 1.1 專案簡介
 
 本系統旨在建立一套 疫情防控志願服務數位化管理平台，整合志願者管理、任務派遣、出勤紀錄、物資追蹤與公告通知等功能，協助校園、社區與政府單位於疫情期間進行高效率的志願者協調與防疫資訊管理。
 
-1.2 系統目標
+#1.2 系統目標
 
 以 Android App 為前端，提供即時、直覺的志願者行動操作介面
 
@@ -14,14 +15,14 @@
 
 提供防疫物資與公告資訊的即時管理
 
-1.3 使用者角色
+# 1.3 使用者角色
 | 角色      | 權限與職責                      |
 | ------- | -------------------------- |
 | **管理員** | 管理志願者、任務、物資、公告、報表、權限與日誌    |
 | **志願者** | 查看任務、簽到出勤、上傳任務回報、接收公告與推播通知 |
 
 
-1.4 功能需求
+# 1.4 功能需求
 | 模組    | 功能描述               |
 | ----- | ------------------ |
 | 志願者管理 | 註冊、查詢、停權、服務紀錄查閱    |
@@ -33,7 +34,7 @@
 | 報表管理  | 任務完成率、志願時數、物資使用統計  |
 
 
-1.5  非功能需求
+# 1.5  非功能需求
 
 效能：API 回應時間 < 1 秒
 
@@ -45,7 +46,7 @@
 
 🧩 二、概要設計說明書（System Design Specification, SDS）
 
-2.1 系統總體結構
+# 2.1 系統總體結構
 
 系統採用 前後端分離架構：
 
@@ -57,7 +58,7 @@ MySQL：資料儲存與查詢
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbef6346-18a5-44f6-96e3-d524c07e0d80" />
 
-2.2 模組設計概述
+# 2.2 模組設計概述
 | 模組                          | 功能概要           |
 | --------------------------- | -------------- |
 | **AuthController**          | 登入、註冊、Token 驗證 |
@@ -71,7 +72,7 @@ MySQL：資料儲存與查詢
 
 <img width="7053" height="3435" alt="deepseek_mermaid_20251227_ca7777" src="https://github.com/user-attachments/assets/fbfa64dc-beea-40cd-84f3-58bbb628ac70" />
 
-2.3 系統資料流
+# 2.3 系統資料流
 
 App 透過 REST API 發送 JSON 請求
 
@@ -81,7 +82,7 @@ Repository 層透過 EF Core 存取 MySQL
 
 結果回傳 JSON 給 Android 前端顯示
 
-2.4 技術框架
+# 2.4 技術框架
 
 Android：Kotlin + MVVM + Retrofit
 
@@ -93,7 +94,7 @@ Authentication：JWT + ASP.NET Identity
 
 🧠 三、詳細設計說明書（Detailed Design Document, DDD）
 
-3.1 類別設計（Class Design）
+ 3.1 類別設計（Class Design）
 
 3.1.1 實體類別（Domain Models）
 
