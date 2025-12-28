@@ -1,4 +1,5 @@
 🧾 一、需求說明書（Software Requirements Specification, SRS）
+
 1.1 專案簡介
 
 本系統旨在建立一套 疫情防控志願服務數位化管理平台，整合志願者管理、任務派遣、出勤紀錄、物資追蹤與公告通知等功能，協助校園、社區與政府單位於疫情期間進行高效率的志願者協調與防疫資訊管理。
@@ -17,6 +18,7 @@
 角色	權限與職責
 管理員	管理志願者、任務、物資、公告、報表、權限與日誌
 志願者	查看任務、簽到出勤、上傳任務回報、接收公告與推播通知
+
 1.4 功能需求
 模組	功能描述
 志願者管理	註冊、查詢、停權、服務紀錄查閱
@@ -26,6 +28,7 @@
 公告通知	發布公告、任務提醒、推播通知
 系統管理	登入驗證、角色權限、日誌追蹤
 報表管理	任務完成率、志願時數、物資使用統計
+
 1.5 非功能需求
 
 效能：API 回應時間 < 1 秒
@@ -37,6 +40,7 @@
 擴充性：支援跨平台（未來 Flutter/iOS）
 
 🧩 二、概要設計說明書（System Design Specification, SDS）
+
 2.1 系統總體結構
 
 系統採用 前後端分離架構：
@@ -82,8 +86,11 @@ Database：MySQL + Code First Migration
 Authentication：JWT + ASP.NET Identity
 
 🧠 三、詳細設計說明書（Detailed Design Document, DDD）
+
 3.1 類別設計（Class Design）
+
 3.1.1 實體類別（Domain Models）
+
 類別	屬性	關聯
 Volunteer	Id, Name, Phone, Status, TotalHours	Assignment*, Attendance*
 Task	Id, Title, Description, Status, Date	Assignment*, Attendance*
@@ -92,7 +99,9 @@ Attendance	Id, VolunteerId, TaskId, CheckInTime, Location	Volunteer, Task
 Supply	Id, Name, Quantity, Type	SupplyRecord*
 Announcement	Id, Title, Content, PublishDate	Volunteer*
 AuditLog	Id, AdminId, Action, Time	Admin
+
 3.1.2 Service 層範例
+
 public class TaskService {
     private readonly ITaskRepository _taskRepo;
     public TaskService(ITaskRepository taskRepo) {
@@ -137,6 +146,7 @@ Response:
 }
 
 🧪 四、測試計畫（Software Test Plan, STP）
+
 4.1 測試目標
 
 驗證系統各模組功能正確性、穩定性、安全性與效能，確保符合需求規格。
@@ -150,6 +160,7 @@ Attendance	簽到時間、GPS 紀錄、重複簽到檢查
 Supply	庫存更新、領用紀錄、低量警示
 Announcement	發布、查詢、推播通知
 Report	統計計算、PDF 匯出
+
 4.3 測試類型
 
 單元測試 (Unit Test)：Service 與 Repository
@@ -165,11 +176,13 @@ Report	統計計算、PDF 匯出
 使用者驗收測試 (UAT)：由實際志願者操作驗證流程
 
 4.4 測試環境
+
 項目	規格
 作業系統	Windows Server 2022 / Android 12
 開發工具	Visual Studio 2022, Android Studio
 資料庫	MySQL 8.0
 測試工具	Postman, JMeter, xUnit
+
 4.5 測試通過標準
 
 所有核心功能測試案例通過率 ≥ 95%
