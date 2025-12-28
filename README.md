@@ -15,19 +15,23 @@
 提供防疫物資與公告資訊的即時管理
 
 1.3 使用者角色
-角色	權限與職責
-管理員	管理志願者、任務、物資、公告、報表、權限與日誌
-志願者	查看任務、簽到出勤、上傳任務回報、接收公告與推播通知
+| 角色      | 權限與職責                      |
+| ------- | -------------------------- |
+| **管理員** | 管理志願者、任務、物資、公告、報表、權限與日誌    |
+| **志願者** | 查看任務、簽到出勤、上傳任務回報、接收公告與推播通知 |
+
 
 1.4 功能需求
-模組	功能描述
-志願者管理	註冊、查詢、停權、服務紀錄查閱
-任務派遣	任務建立、指派、進度管理
-出勤簽到	GPS/QR/手動簽到、時數自動計算
-物資管理	庫存登錄、領用紀錄、數量警示
-公告通知	發布公告、任務提醒、推播通知
-系統管理	登入驗證、角色權限、日誌追蹤
-報表管理	任務完成率、志願時數、物資使用統計
+| 模組    | 功能描述               |
+| ----- | ------------------ |
+| 志願者管理 | 註冊、查詢、停權、服務紀錄查閱    |
+| 任務派遣  | 任務建立、指派、進度管理       |
+| 出勤簽到  | GPS/QR/手動簽到、時數自動計算 |
+| 物資管理  | 庫存登錄、領用紀錄、數量警示     |
+| 公告通知  | 發布公告、任務提醒、推播通知     |
+| 系統管理  | 登入驗證、角色權限、日誌追蹤     |
+| 報表管理  | 任務完成率、志願時數、物資使用統計  |
+
 
 1.5  非功能需求
 
@@ -54,14 +58,16 @@ MySQL：資料儲存與查詢
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbef6346-18a5-44f6-96e3-d524c07e0d80" />
 
 2.2 模組設計概述
-模組	功能概要
-AuthController	登入、註冊、Token 驗證
-VolunteersController	志願者資料 CRUD
-TasksController	任務建立與指派
-AttendanceController	出勤紀錄上傳與查詢
-SuppliesController	防疫物資存取管理
-AnnouncementsController	公告與推播管理
-ReportsController	統計報表產生
+| 模組                          | 功能概要           |
+| --------------------------- | -------------- |
+| **AuthController**          | 登入、註冊、Token 驗證 |
+| **VolunteersController**    | 志願者資料 CRUD     |
+| **TasksController**         | 任務建立與指派        |
+| **AttendanceController**    | 出勤紀錄上傳與查詢      |
+| **SuppliesController**      | 防疫物資存取管理       |
+| **AnnouncementsController** | 公告與推播管理        |
+| **ReportsController**       | 統計報表產生         |
+
 
 <img width="7053" height="3435" alt="deepseek_mermaid_20251227_ca7777" src="https://github.com/user-attachments/assets/fbfa64dc-beea-40cd-84f3-58bbb628ac70" />
 
@@ -91,14 +97,16 @@ Authentication：JWT + ASP.NET Identity
 
 3.1.1 實體類別（Domain Models）
 
-類別	屬性	關聯
-Volunteer	Id, Name, Phone, Status, TotalHours	Assignment*, Attendance*
-Task	Id, Title, Description, Status, Date	Assignment*, Attendance*
-Assignment	Id, VolunteerId, TaskId, AssignedDate	Volunteer, Task
-Attendance	Id, VolunteerId, TaskId, CheckInTime, Location	Volunteer, Task
-Supply	Id, Name, Quantity, Type	SupplyRecord*
-Announcement	Id, Title, Content, PublishDate	Volunteer*
-AuditLog	Id, AdminId, Action, Time	Admin
+| 類別           | 屬性                                             | 關聯                       |
+| ------------ | ---------------------------------------------- | ------------------------ |
+| Volunteer    | Id, Name, Phone, Status, TotalHours            | Assignment*, Attendance* |
+| Task         | Id, Title, Description, Status, Date           | Assignment*, Attendance* |
+| Assignment   | Id, VolunteerId, TaskId, AssignedDate          | Volunteer, Task          |
+| Attendance   | Id, VolunteerId, TaskId, CheckInTime, Location | Volunteer, Task          |
+| Supply       | Id, Name, Quantity, Type                       | SupplyRecord*            |
+| Announcement | Id, Title, Content, PublishDate                | Volunteer*               |
+| AuditLog     | Id, AdminId, Action, Time                      | Admin                    |
+
 
 3.1.2 Service 層範例
 
@@ -152,14 +160,16 @@ Response:
 驗證系統各模組功能正確性、穩定性、安全性與效能，確保符合需求規格。
 
 4.2 測試範圍
-模組	測試項目
-Auth	登入驗證、Token 有效性
-Volunteer	註冊、編輯、查詢、停權
-Task	任務建立、指派、狀態更新
-Attendance	簽到時間、GPS 紀錄、重複簽到檢查
-Supply	庫存更新、領用紀錄、低量警示
-Announcement	發布、查詢、推播通知
-Report	統計計算、PDF 匯出
+| 模組           | 測試項目               |
+| ------------ | ------------------ |
+| Auth         | 登入驗證、Token 有效性     |
+| Volunteer    | 註冊、編輯、查詢、停權        |
+| Task         | 任務建立、指派、狀態更新       |
+| Attendance   | 簽到時間、GPS 紀錄、重複簽到檢查 |
+| Supply       | 庫存更新、領用紀錄、低量警示     |
+| Announcement | 發布、查詢、推播通知         |
+| Report       | 統計計算、PDF 匯出        |
+
 
 4.3 測試類型
 
@@ -177,11 +187,13 @@ Report	統計計算、PDF 匯出
 
 4.4 測試環境
 
-項目	規格
-作業系統	Windows Server 2022 / Android 12
-開發工具	Visual Studio 2022, Android Studio
-資料庫	MySQL 8.0
-測試工具	Postman, JMeter, xUnit
+| 項目   | 規格                                 |
+| ---- | ---------------------------------- |
+| 作業系統 | Windows Server 2022 / Android 12   |
+| 開發工具 | Visual Studio 2022, Android Studio |
+| 資料庫  | MySQL 8.0                          |
+| 測試工具 | Postman, JMeter, xUnit             |
+
 
 4.5 測試通過標準
 
