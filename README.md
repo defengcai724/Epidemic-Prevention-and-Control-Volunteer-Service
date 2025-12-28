@@ -47,6 +47,8 @@ ASP.NET Core Web API：後端服務邏輯
 
 MySQL：資料儲存與查詢
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbef6346-18a5-44f6-96e3-d524c07e0d80" />
+
 2.2 模組設計概述
 模組	功能概要
 AuthController	登入、註冊、Token 驗證
