@@ -110,17 +110,8 @@ Authentication：JWT + ASP.NET Identity
 
 3.1.2 Service 層範例
 
-public class TaskService {
-    private readonly ITaskRepository _taskRepo;
-    public TaskService(ITaskRepository taskRepo) {
-        _taskRepo = taskRepo;
-    }
-    public async Task<TaskDto> CreateTaskAsync(TaskDto dto) {
-        var entity = new Task { Title = dto.Title, Status = "未開始" };
-        await _taskRepo.AddAsync(entity);
-        return dto;
-    }
-}
+<img width="707" height="411" alt="image" src="https://github.com/user-attachments/assets/bd42ba84-d2eb-49fa-ab4a-57bb81a3716e" />
+
 
 3.2 資料庫設計
 
@@ -141,17 +132,8 @@ AuditLog(LogId PK, AdminId, Action, Time)
 <img width="6609" height="1844" alt="deepseek_mermaid_20251227_134fa2" src="https://github.com/user-attachments/assets/419c2914-5133-40c6-b216-90c3f6a99eef" />
 
 3.3 API 介面格式範例
-POST /api/tasks
-{
-  "title": "體溫量測",
-  "description": "學校入口體溫測量任務",
-  "date": "2025-01-05"
-}
-Response:
-{
-  "status": "success",
-  "taskId": 12
-}
+<img width="390" height="404" alt="image" src="https://github.com/user-attachments/assets/55c807b2-eb34-416f-9c03-9dfb0d0fbd12" />
+
 
 🧪 四、測試計畫（Software Test Plan, STP）
 
