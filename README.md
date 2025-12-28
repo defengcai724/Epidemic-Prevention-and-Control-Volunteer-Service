@@ -58,6 +58,9 @@ AttendanceController	出勤紀錄上傳與查詢
 SuppliesController	防疫物資存取管理
 AnnouncementsController	公告與推播管理
 ReportsController	統計報表產生
+
+<img width="7053" height="3435" alt="deepseek_mermaid_20251227_ca7777" src="https://github.com/user-attachments/assets/fbfa64dc-beea-40cd-84f3-58bbb628ac70" />
+
 2.3 系統資料流
 
 App 透過 REST API 發送 JSON 請求
