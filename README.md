@@ -95,8 +95,6 @@ Authentication：JWT + ASP.NET Identity
 
 ## 🧠 三、詳細設計說明書（Detailed Design Document, DDD）
 
-### 3.1 類別設計（Class Design）
-
 ### 3.1.1 實體類別（Domain Models）
 
 | 類別           | 屬性                                             | 關聯                       |
